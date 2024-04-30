@@ -33,6 +33,6 @@ struct ssi_hw {
     rw32_t rx_sample_dly;
     rw32_t spi_ctrlr0;
     rw32_t txd_drive_edge;
-}
+};
 
 #endif
