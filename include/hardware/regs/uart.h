@@ -19,7 +19,7 @@
 #include <types.h>
 
 #define UART0_HW ((struct uart_hw *)0x40034000)
-#define UART0_HW ((struct uart_hw *)0x40038000)
+#define UART1_HW ((struct uart_hw *)0x40038000)
 
 struct uart_hw {
     rw32_t uartdr;
