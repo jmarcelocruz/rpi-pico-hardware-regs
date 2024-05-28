@@ -16,6 +16,10 @@
 #ifndef HW_REGS_PADS_BANK0_H
 #define HW_REGS_PADS_BANK0_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 #define PADS_BANK0_HW ((struct pads_bank0_hw *)0x4001c000)
@@ -26,5 +30,9 @@ struct pads_bank0_hw {
     rw32_t swclk;
     rw32_t swd;
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

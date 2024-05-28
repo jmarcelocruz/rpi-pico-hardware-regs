@@ -16,6 +16,10 @@
 #ifndef HW_REGS_MPU_H
 #define HW_REGS_MPU_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 #define MPU_HW ((struct mpu_hw *)0xe000ed90)
@@ -27,5 +31,9 @@ struct mpu_hw {
     rw32_t rbar;
     rw32_t rasr;
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

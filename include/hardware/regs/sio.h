@@ -16,6 +16,10 @@
 #ifndef HW_REGS_SIO_H
 #define HW_REGS_SIO_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 #define SIO_HW ((struct sio_hw*)0xd0000000)
@@ -72,5 +76,9 @@ struct sio_hw {
     struct interp_hw interp[2];
     rw32_t spinlock[32];
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

@@ -16,6 +16,10 @@
 #ifndef HW_REGS_DMA_H
 #define HW_REGS_DMA_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 #define DMA_HW ((struct dma_hw *)0x50000000)
@@ -66,5 +70,9 @@ struct dma_hw {
     uint32_t _pad3[237]; /* undefined in datasheet */
     struct dma_channel_dbg_hw channel_dbg[12];
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

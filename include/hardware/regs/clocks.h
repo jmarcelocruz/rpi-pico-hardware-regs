@@ -16,6 +16,10 @@
 #ifndef HW_REGS_CLOCKS_H
 #define HW_REGS_CLOCKS_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 #define CLOCKS_HW ((struct clocks_hw *)0x40008000)
@@ -60,5 +64,9 @@ struct clocks_hw {
     rw32_t intf;
     ro32_t ints;
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

@@ -16,6 +16,10 @@
 #ifndef HW_REGS_ROSC_H
 #define HW_REGS_ROSC_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 #define ROSC_HW ((struct rosc_hw *)0x40060000)
@@ -31,5 +35,9 @@ struct rosc_hw {
     ro32_t randombit;
     rw32_t count;
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

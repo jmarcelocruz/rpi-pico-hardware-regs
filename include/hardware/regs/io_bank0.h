@@ -16,6 +16,10 @@
 #ifndef HW_REGS_IO_BANK0_H
 #define HW_REGS_IO_BANK0_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 #define IO_BANK0_HW ((struct io_bank0_hw *)0x40014000)
@@ -38,5 +42,9 @@ struct io_bank0_hw {
     rw32_t dormant_wake_intf[4];
     ro32_t dormant_wake_ints[4];
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

@@ -16,6 +16,10 @@
 #ifndef HW_REGS_I2C_H
 #define HW_REGS_I2C_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 #define I2C0_HW ((struct i2c_hw *)0x40044000)
@@ -69,5 +73,9 @@ struct i2c_hw {
     ro32_t ic_comp_version;
     ro32_t ic_comp_type;
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

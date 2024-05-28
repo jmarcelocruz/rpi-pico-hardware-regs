@@ -16,6 +16,10 @@
 #ifndef HW_REGS_UART_H
 #define HW_REGS_UART_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 #define UART0_HW ((struct uart_hw *)0x40034000)
@@ -42,5 +46,9 @@ struct uart_hw {
     ro32_t uartperiphid[4];
     ro32_t uartpcellid[4];
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

@@ -16,6 +16,10 @@
 #ifndef HW_REGS_SYSCFG_H
 #define HW_REGS_SYSCFG_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 #define SYSCFG_HW ((struct syscfg_hw *)0x40004000)
@@ -28,5 +32,9 @@ struct syscfg_hw {
     rw32_t dbgforce;
     rw32_t mempowerdown;
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

@@ -16,6 +16,10 @@
 #ifndef HW_REGS_PIO_H
 #define HW_REGS_PIO_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 #define PIO0_HW ((struct pio_hw *)0x50200000)
@@ -48,5 +52,9 @@ struct pio_hw {
     rw32_t irq1_intf;
     ro32_t irq1_ints;
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

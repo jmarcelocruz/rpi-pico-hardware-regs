@@ -16,6 +16,10 @@
 #ifndef HW_REGS_XOSC_H
 #define HW_REGS_XOSC_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 #define XOSC_HW ((struct xosc_hw *)0x40024000)
@@ -27,5 +31,9 @@ struct xosc_hw {
     rw32_t startup;
     rw32_t count;
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

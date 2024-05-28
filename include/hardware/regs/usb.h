@@ -16,6 +16,10 @@
 #ifndef HW_REGS_USB_H
 #define HW_REGS_USB_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 #define USB_HW ((struct usb_hw *)0x50110000)
@@ -46,5 +50,9 @@ struct usb_hw {
     rw32_t intf;
     ro32_t ints;
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

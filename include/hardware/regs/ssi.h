@@ -16,6 +16,10 @@
 #ifndef HW_REGS_SSI_H
 #define HW_REGS_SSI_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 #define SSI_HW ((struct ssi_hw *)0x18000000)
@@ -49,5 +53,9 @@ struct ssi_hw {
     rw32_t spi_ctrlr0;
     rw32_t txd_drive_edge;
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

@@ -16,6 +16,10 @@
 #ifndef HW_REGS_PWM_H
 #define HW_REGS_PWM_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 #define PWM_HW ((struct pwm_hw *)0x40050000)
@@ -37,4 +41,8 @@ struct pwm_hw {
     ro32_t ints;
 };
 
- #endif
+#ifdef __cplusplus
+}
+#endif
+
+#endif

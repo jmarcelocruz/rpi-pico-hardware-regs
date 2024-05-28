@@ -16,6 +16,10 @@
 #ifndef HW_REGS_WATCHDOG_H
 #define HW_REGS_WATCHDOG_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 #define WATCHDOG_HW ((struct watchdog_hw *)0x40058000)
@@ -27,5 +31,9 @@ struct watchdog_hw {
     rw32_t scratch[8];
     rw32_t tick;
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

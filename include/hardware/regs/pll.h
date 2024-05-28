@@ -16,6 +16,10 @@
 #ifndef HW_REGS_PLL_H
 #define HW_REGS_PLL_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 #define PLL_SYS_HW ((struct pll_hw *)0x40028000)
@@ -27,5 +31,9 @@ struct pll_hw {
     rw32_t fbdiv_int;
     rw32_t prim;
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

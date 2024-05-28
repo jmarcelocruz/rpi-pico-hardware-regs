@@ -16,6 +16,10 @@
 #ifndef HW_REGS_IO_QSPI_H
 #define HW_REGS_IO_QSPI_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 #define IO_QSPI_HW ((struct io_qspi_hw *)0x40018000)
@@ -40,5 +44,9 @@ struct io_qspi_hw {
     rw32_t dormant_wake_intf;
     ro32_t dormant_wake_ints;
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

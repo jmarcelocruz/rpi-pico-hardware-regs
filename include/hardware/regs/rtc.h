@@ -16,6 +16,10 @@
 #ifndef HW_REGS_RTC_H
 #define HW_REGS_RTC_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 #define RTC_HW ((struct rtc_hw *)0x4005c000)
@@ -34,5 +38,9 @@ struct rtc_hw {
     rw32_t intf;
     ro32_t ints;
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

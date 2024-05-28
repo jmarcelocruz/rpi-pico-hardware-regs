@@ -16,6 +16,10 @@
 #ifndef HW_REGS_SCB_H
 #define HW_REGS_SCB_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 #define SCB_HW ((struct scb_hw *)0xe000ed00)
@@ -32,5 +36,9 @@ struct scb_hw {
     rw32_t shpr3;
     rw32_t shcsr;
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

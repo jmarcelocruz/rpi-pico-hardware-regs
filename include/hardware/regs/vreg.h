@@ -16,6 +16,10 @@
 #ifndef HW_REGS_VREG_H
 #define HW_REGS_VREG_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 #define VREG_HW ((struct vreg_hw *)0x40064000)
@@ -26,5 +30,9 @@ struct vreg_hw {
     rw32_t bod;
     rw32_t chip_reset;
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

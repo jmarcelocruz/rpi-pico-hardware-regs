@@ -16,6 +16,10 @@
 #ifndef HW_REGS_PADS_QSPI_H
 #define HW_REGS_PADS_QSPI_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 #define PADS_QSPI_HW ((struct pads_qspi_hw *)0x40020000)
@@ -26,5 +30,9 @@ struct pads_qspi_hw {
     rw32_t sd[4];
     rw32_t ss;
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

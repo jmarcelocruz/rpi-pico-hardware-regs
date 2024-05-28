@@ -16,6 +16,10 @@
 #ifndef HW_REGS_PSM_H
 #define HW_REGS_PSM_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 #define PSM_HW ((struct psm_hw *)0x40010000)
@@ -26,5 +30,9 @@ struct psm_hw {
     rw32_t wdsel;
     ro32_t done;
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

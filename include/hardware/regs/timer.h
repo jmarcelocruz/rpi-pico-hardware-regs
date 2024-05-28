@@ -16,6 +16,10 @@
 #ifndef HW_REGS_TIMER_H
 #define HW_REGS_TIMER_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 #define TIMER_HW ((struct timer_hw *)0x40054000)
@@ -36,5 +40,9 @@ struct timer_hw {
     rw32_t intf;
     ro32_t ints;
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

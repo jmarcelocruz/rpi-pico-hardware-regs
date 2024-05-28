@@ -16,6 +16,10 @@
 #ifndef HW_REGS_NVIC_H
 #define HW_REGS_NVIC_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 #define NVIC_HW ((struct nvic_hw *)0xe000e100)
@@ -28,5 +32,9 @@ struct nvic_hw{
     rw32_t icpr;
     rw32_t ipr[8];
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

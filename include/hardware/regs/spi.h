@@ -16,6 +16,10 @@
 #ifndef HW_REGS_SPI_H
 #define HW_REGS_SPI_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 #define SPI0_HW ((struct spi_hw *)0x4003c000)
@@ -35,5 +39,9 @@ struct spi_hw {
     ro32_t sspperiphid[4];
     ro32_t ssppcellid[4];
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

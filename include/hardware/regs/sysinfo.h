@@ -16,6 +16,10 @@
 #ifndef HW_REGS_SYSINFO_H
 #define HW_REGS_SYSINFO_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 #define SYSINFO_HW ((struct sysinfo_hw *)0x40000000)
@@ -26,5 +30,9 @@ struct sysinfo_hw {
     uint32_t _pad0[14]; /* undefined in datasheet */
     ro32_t gitref_rp2040;
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

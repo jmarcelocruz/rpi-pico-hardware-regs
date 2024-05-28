@@ -16,6 +16,10 @@
 #ifndef HW_REGS_ADC_H
 #define HW_REGS_ADC_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 #define ADC_HW ((struct adc_hw *)0x4004c000)
@@ -31,5 +35,9 @@ struct adc_hw {
     rw32_t intf;
     ro32_t ints;
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
