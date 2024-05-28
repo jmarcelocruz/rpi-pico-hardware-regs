@@ -13,8 +13,8 @@
 # limitations under the License.
 
 VERSION_MAJOR = 1
-VERSION_MINOR = 0
-VERSION_PATCH = 1
+VERSION_MINOR = 1
+VERSION_PATCH = 0
 
 dist: rpi-pico-hardware-regs-${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}.tar.gz
 rpi-pico-hardware-regs-${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}.tar.gz: $(shell find include/ -type f) LICENSE
